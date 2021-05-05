@@ -6,7 +6,17 @@ Similar in principle to rkern's line_profiler (https://github.com/pyutils/line_p
 It has a reasonably high profiling overhead, making it most suited for profiling code such as numpy array operations which spend a large
 fraction of their time in compiled c code. When used for strait python functions, you will inevitably see some distortions due to the profiling overhead
 
-## Usage
+### Installation
+
+```bash
+git clone https://github.com/python-microscopy/mProfile
+cd mProfile
+python setup.py install
+```
+
+pip & conda packages coming soon.
+
+### Usage
 
 ```python
 import mProfile
@@ -35,7 +45,7 @@ An example snippet of profile output is given below:
 
 ![image](https://user-images.githubusercontent.com/19475296/117095084-721d2600-adb9-11eb-9895-848cfd1e4512.png)
 
-## Key differences to `line_profiler`
+### Key differences to `line_profiler`
 
 - requires less modification of the code (no decorators etc)
 - code to be profiled is selected on a per-file basis not per-function
