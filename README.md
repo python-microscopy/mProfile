@@ -12,7 +12,7 @@ fraction of their time in compiled c code. When used for strait python functions
 import mProfile
 
 # turn profiling on and specify which files should be profiled. 
-# matching occures purely on the filename with directories ignored (essentially `os.path.split(fn)[-1] in filenames`)
+# matching occurs purely on the filename with directories ignored (essentially `os.path.split(fn)[-1] in filenames`)
 mProfile.profileOn(['file1.py', 'file2.py'])
 
 # expensive computations
@@ -30,6 +30,10 @@ mProfile.report(display=False, profiledir='/path/to/a/directory')
 ```
 
 which will save one .html profile file for each of the files specified in the `profileOn()` call
+
+An example snippet of profile output is given below:
+
+![image](https://user-images.githubusercontent.com/19475296/117095084-721d2600-adb9-11eb-9895-848cfd1e4512.png)
 
 ## Key differences to `line_profiler`
 
